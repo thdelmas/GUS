@@ -25,6 +25,7 @@ Linux Generator
 ## About Ur-x
 
 Goal here is to delete the concept of a linux distribution by providing a linux generator.
+
 This should generate a full automated installer iso, just have to boot on, no network should be needed once booted.
 
 ### Why ?
@@ -112,4 +113,5 @@ License - see the [LICENSE](LICENSE) file for details
 ## References
 
 [LFS](http://www.linuxfromscratch.org/)
+
 [FAI Project](https://fai-project.org/)
