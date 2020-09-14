@@ -40,7 +40,7 @@ This should generate a full automated installer iso, just have to boot on, no ne
 - Dockerize it
 - Link with ipfs to store compiled files
 
-See the [open issues](https://github.com/yourname/ur-x/issues) for a list of proposed features.
+See the [open issues](https://github.com/thdelmas/ur-x/issues) for a list of proposed features.
 
 ### Built-With
 
@@ -50,7 +50,7 @@ Linux from scratch probably
 
 #### Known Bugs
 
-See the [open issues](https://github.com/yourname/ur-x/issues) for a list of known issues.
+See the [open issues](https://github.com/thdelmas/ur-x/issues) for a list of known issues.
 
 ## Getting Started
 
@@ -98,7 +98,7 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
 3. Commit your Changes (`git commit -m 'Add some fun here'`)
 4. Push to the Branch (`git push origin feature/NewFeature`)
-5. [Open a Pull Request](https://github.com/yourname/ur-x/compare/).
+5. [Open a Pull Request](https://github.com/thdelmas/ur-x/compare/).
 
 ## Contact Us
 
@@ -115,3 +115,5 @@ License - see the [LICENSE](LICENSE) file for details
 [LFS](http://www.linuxfromscratch.org/)
 
 [FAI Project](https://fai-project.org/)
+
+[Yocto project](https://www.yoctoproject.org/)
