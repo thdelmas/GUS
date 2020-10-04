@@ -104,7 +104,7 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 
 ## Authors
 
-* **Théophile Delmas** - *Initial design*
+* **thdelmas** - *Initial design*
 
 See also the list of [contributors](https://github.com/thdelmas/ur-x/graphs/contributors) who participated in this project.
 
