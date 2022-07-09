@@ -2,18 +2,19 @@
 
 # Exit on error
 set -e
+YELLOW="\033[0;33m"
+RESET="\033[0;0m"
 
-cat <<EOF
-	1.1. How to Build an LFS System
-EOF
 
-echo "Choose an already installed Linux distribution"
 cd ../utils
-./createvm.sh debian
-./upload_assets.sh
-cd -
 
-echo "provide necessary programs, including a compiler, linker, and shell"
+printf "${YELLOW}1.1 Choose an already installed Linux distribution${RESET}\n"
+./createvm.sh debian
+
+printf "${YELLOW}2.2 Provide necessary programs, including a compiler, linker, and shell${RESET}\n"
+./upload_assets.sh
+./prepare_host.sh
+
 echo "create a new Linux native partition and file system"
 echo "which packages and patches need to be downloaded"
 echo "how to store them on the new file system"

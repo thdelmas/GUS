@@ -1,4 +1,4 @@
 #!/bin/bash
 
-scp -P 4222 -r ../assets 'xubuntu@127.0.0.1':/home/xubuntu/lfs
-ssh -p4222 xubuntu@127.0.0.1 'pwd && ls lfs && ./lfs/assets/remote_HW.sh & tree'
+rsync -e "ssh -p4222 -i $HOME/.ssh/id_rsa" -r ../assets 'xubuntu@127.0.0.1':/home/xubuntu/lfs 2>&-
+printf "\033[0;32mAssets Uploaded\033[0;0m\n"

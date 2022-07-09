@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# Simple script to list version numbers of critical development tools
+export LC_ALL=C
+bash --version | head -n1 | cut -d" " -f2-4
+
+# Check SH symlink
+MYSH=$(readlink -f /bin/sh)
+echo "/bin/sh -> $MYSH"
+if ! echo $MYSH | grep -q bash
+then
+	echo "ERROR: /bin/sh does not point to bash"
+	echo "Changing to /bin/bash"
+	ln -sf /bin/bash /bin/sh
+	MYSH=$(readlink -f /bin/sh)
+	if [ "$MYSH" = "/bin/bash" ]
+	then
+		echo "\033[0;32mChanged successfully\033[0;0m"
+	else
+		echo "\033[0;31mChange failed\033[0;0m"
+		exit 1
+	fi
+else
+	printf "\033[0;32mSH -> /bin/bash\033[0;0m\n"
+fi
+unset MYSH
+
+# Check Binutils
+echo -n "Binutils: "; ld --version | head -n1 | cut -d" " -f3-
+bison --version | head -n1
+
+if [ -h /usr/bin/yacc ]; then
+  echo "/usr/bin/yacc -> `readlink -f /usr/bin/yacc`";
+elif [ -x /usr/bin/yacc ]; then
+  echo yacc is `/usr/bin/yacc --version | head -n1`
+else
+  echo "yacc not found"
+fi
+
+echo -n "Coreutils: "; chown --version | head -n1 | cut -d")" -f2
+diff --version | head -n1
+find --version | head -n1
+gawk --version | head -n1
+
+if [ -h /usr/bin/awk ]; then
+  echo "/usr/bin/awk -> `readlink -f /usr/bin/awk`";
+elif [ -x /usr/bin/awk ]; then
+  echo awk is `/usr/bin/awk --version | head -n1`
+else
+  echo "awk not found"
+fi
+
+gcc --version | head -n1
+g++ --version | head -n1
+grep --version | head -n1
+gzip --version | head -n1
+cat /proc/version
+m4 --version | head -n1
+make --version | head -n1
+patch --version | head -n1
+echo Perl `perl -V:version`
+python3 --version
+sed --version | head -n1
+tar --version | head -n1
+makeinfo --version | head -n1  # texinfo version
+xz --version | head -n1
+
+echo 'int main(){}' > dummy.c && g++ -o dummy dummy.c
+if [ -x dummy ]
+  then echo "g++ compilation OK";
+  else echo "g++ compilation failed"; fi
+rm -f dummy.c dummy
