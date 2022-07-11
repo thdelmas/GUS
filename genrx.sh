@@ -11,3 +11,9 @@ Don't to hesitate to reach out for any help:
 $EMAILS"
 
 echo "$WELCOME_MESSAGE"
+
+echo "Creating Host"
+#create_host.sh
+
+echo "Launching remote building"
+#launch_generation.sh
