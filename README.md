@@ -1,4 +1,4 @@
-# Ur-x
+# Generated Unix System
 
 Linux Generator
 
