@@ -15,12 +15,21 @@ if ! [ -e "$GUS_VM_ISO" ]
 then
 	echo "ISO not found"
 	download_iso "$GUS_ISO_URL"
+else
+	echo "ISO: $GUS_VM_ISO"	
 fi
 
-if ! which VBoxManage
-then
-	echo "VirtualBox not found"
-	exit 1
-fi
-
-./VBox/createvm.42sh
+case "$GUS_HYPERVISOR" in
+	"VirtualBox")
+		if ! which VBoxManage
+		then
+			echo "VirtualBox not found"
+			exit 1
+		else
+			./VBox/createvm.sh "$GUS_VM_ISO"
+		fi
+		;;
+	*)
+		echo "Unexpected Hypervisor"
+		exit 1
+esac

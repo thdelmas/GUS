@@ -3,7 +3,7 @@
 # Check OVA File
 OVA_FILE="$HOME"'/Xubuntu_42Paris.ova'
 IMAGE_URL='https://sourceforge.net/projects/linuxvmimages/files/VirtualBox/X/Xubuntu_20.04.1_VB.zip/download'
-if ! [ -e "$OVA_FILE" ]
+if ! [ -e "$1" ] && ! [ -e "$OVA_FILE" ]
 then
 	printf "OVA File not present, downloading\n" >&2
 	curl -L --progress-bar "$IMAGE_URL" > '/tmp/xubuntu.zip'
@@ -13,6 +13,10 @@ then
 	cd -
 fi
 
+if [ "$1" ]
+then
+	OVA_FILE="$1"
+fi
 
 # Import VM
 

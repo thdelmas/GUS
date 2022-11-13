@@ -9,15 +9,17 @@ source gus.env
 #
 
 echo 'Launching '"$GUS_METHOD"' mode'
-if [ "$GUS_METHOD" == 'VM' ]
-then
-	./GUS/GUS_vm.sh
-elif [ "$GUS_METHOD" == 'Docker' ]
-then
-	echo "	Not yet implemented"
-	exit 1
-	./GUS/GUS_docker.sh
-else
-	echo "Undefined"
-	exit 1
-fi
+
+case "$GUS_METHOD" in
+	'VM')
+		./GUS/GUS_vm.sh
+		;;
+	'Docker')
+		echo "	Not yet implemented"
+		exit 1
+		./GUS/GUS_docker.sh
+		;;
+	*)
+		echo "Undefined"
+		exit 1
+esac
