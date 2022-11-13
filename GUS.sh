@@ -14,4 +14,4 @@ then
 	./GUS/GUS_docker.sh
 else
 	echo "	Undefined"
-
+fi
