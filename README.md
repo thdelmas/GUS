@@ -101,10 +101,11 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 5. [Open a Pull Request](https://github.com/thdelmas/ur-x/compare/).
 
 ## Contact Us
+If you want to get involved with the project [join the discord server 🧑‍💻](https://discord.gg/g94gBzRdXu)
 
 ## Authors
 
-* **thdelmas** - *Initial design*
+* [**thdelmas**](mailto:mia@ack.ninja) - *Initial design*
 
 See also the list of [contributors](https://github.com/thdelmas/ur-x/graphs/contributors) who participated in this project.
 
