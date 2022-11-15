@@ -123,3 +123,5 @@ License - see the [LICENSE](LICENSE) file for details
 [FAI Project](https://fai-project.org/)
 
 [Yocto project](https://www.yoctoproject.org/)
+
+[Linux VM images](https://www.linuxvmimages.com/)
