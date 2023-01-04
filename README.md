@@ -34,11 +34,12 @@ This should generate a full automated installer iso, just have to boot on, no ne
 
 ### Roadmap
 
-- Make a linux from scratch
-- Script it
-- Make it portable / variables
-- Dockerize it
-- Link with ipfs to store compiled files
+#### Specs
+- as automated as possible
+- read user preferences from config file
+- build a functional LFS
+- build a GNU/Linux system, starting by the most common distributions
+- aim to extend this to any Unix system
 
 See the [open issues](https://github.com/thdelmas/gus/issues) for a list of proposed features.
 
